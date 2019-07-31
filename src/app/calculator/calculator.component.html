@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+<p> First: </p>
+<input type="number" [value]="first" (change)="onChangeFirst($event.target.value)">
+
+<p> Second: </p>
+<input type="number" [value]="first" (change)="onChangeSecond($event.target.value)">
+
+<select [value]="operator" (change)="onSelectOperator($event.target.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+
+<div>
+  <button (click)="calculator()">Calculator</button>
+  {{result}}
+</div>
+</body>
+</html>
